@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabPageTest", "TabPageTest\TabPageTest.csproj", "{B18EF118-B198-4E18-90A7-3B19D12F7372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B18EF118-B198-4E18-90A7-3B19D12F7372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18EF118-B198-4E18-90A7-3B19D12F7372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18EF118-B198-4E18-90A7-3B19D12F7372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18EF118-B198-4E18-90A7-3B19D12F7372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FE9BFF3-F718-46FD-A888-03519409A436}
+	EndGlobalSection
+EndGlobal
