@@ -17,5 +17,5 @@
 
 ##참고
 - Form.ShowDialog MessageLoop 관련 : https://docs.microsoft.com/ko-kr/dotnet/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow
-Message Loop 2개 이상일 경우 버그 발생 경고 : https://social.msdn.microsoft.com/Forums/windows/en-US/ac65ea58-9f21-404d-9a01-52a2ec4af05b/can-a-windows-application-have-two-message-pumps?forum=winforms
-Invoke, BeginInvoke의 차이 및 Form Message Queue 관련: https://www.codeproject.com/Articles/10311/What-s-up-with-BeginInvoke
+- Message Loop 2개 이상일 경우 버그 발생 경고 : https://social.msdn.microsoft.com/Forums/windows/en-US/ac65ea58-9f21-404d-9a01-52a2ec4af05b/can-a-windows-application-have-two-message-pumps?forum=winforms
+- Invoke, BeginInvoke의 차이 및 Form Message Queue 관련: https://www.codeproject.com/Articles/10311/What-s-up-with-BeginInvoke
