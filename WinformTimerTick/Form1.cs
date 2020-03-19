@@ -22,6 +22,9 @@ namespace WinformTimerTick
 
     public partial class Form1 : Form
     {
+        int TimerInterval = 55; // MSDN 권고사항 : Winform Timer는 55ms가 최소 보장된 정확도이며, 그 밑의 Interval을 사용하면 정확하지 않을 수 있다. 고해상도 타이머를 원한다면 Timers.Timer를 사용하라.
+        // https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.forms.timer?view=netframework-4.8
+
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace WinformTimerTick
 
         private void BtnWorkStart1_Click(object sender, EventArgs e)
         {
-            timer1.Interval = 10; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
+            timer1.Interval = TimerInterval; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
             timer1.Enabled = true;
         }
 
@@ -45,7 +48,7 @@ namespace WinformTimerTick
 
         private void BtnWorkStart2_Click(object sender, EventArgs e)
         {
-            timer2.Interval = 10; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
+            timer2.Interval = TimerInterval; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
             timer2.Enabled = true;
         }
 
@@ -65,7 +68,7 @@ namespace WinformTimerTick
 
         private void BtnWorkStart3_Click(object sender, EventArgs e)
         {
-            timer3.Interval = 10; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
+            timer3.Interval = TimerInterval; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
             timer3.Enabled = true;
         }
 
@@ -85,7 +88,7 @@ namespace WinformTimerTick
 
         private void BtnWorkStart4_Click(object sender, EventArgs e)
         {
-            timer4.Interval = 10; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
+            timer4.Interval = TimerInterval; // 10 ms 마다 동작 (시스템환경에 따라 정확하지 않을 수 있음.)
             timer4.Enabled = true;
         }
 
