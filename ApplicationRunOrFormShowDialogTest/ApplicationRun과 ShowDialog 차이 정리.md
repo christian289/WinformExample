@@ -1,7 +1,7 @@
 #Application.Run 과 Form.ShowDialog
 
 ##공통점
-- Message Loop를 운영체제에서 할당받는다.
+- Main Thread에서 Message Loop를 생성한다. (Application.MessageLoop Property 참고)
 
 ##차이점
 - Application.Run은 Thread 당 1번만 사용할 수 있다. 
@@ -10,9 +10,8 @@
   Application.Run 으로 생성된 Form을 X 버튼으로 클릭하여 닫는 경우, FormClosing, FormClosed Event 다음으로 ApplicationExit 이벤트 핸들러가 호출됨. (Application.Exit() 와 같은 효과)
   이후 현재 Thread의 Message Loop가 종료되므로, 현재 Thread에서 Form.Show를 하는 경우 이미 종료된 Message Loop를 참조하게 되어 Exception 발생.
 
-- Form.ShowDialog는 Thread를 새로 생성하지는 않지만, 운영체제로부터 현재 Thread에 새 Message Loop를 새로 할당받아, 
-  ShowDialog를 호출한 Thread의 기존 Message Loop는 일시정지시키고 새로 받은 Message Loop를 우선 처리함. (이 때부터 마우스 이벤트 등등 Window Message를 ShowDialog의 Message Loop가 처리하게 됨.)
-  때문에 ShowDialog를 호출한 폼의 Message Loop가 일시정지되어 UI 업데이트를 할 수 없음.
+- Form.ShowDialog는 Thread를 새로 생성하지는 않지만, ShowDialog를 호출한 Thread의 기존 Message Loop는 일시정지시키고 새로 Message Loop를 생성함. (이 때부터 마우스 이벤트 등등 Window Message를 새로 생성한 ShowDialog의 Message Loop가 처리하게 됨.)
+  때문에 ShowDialog를 호출한 폼(부모폼)의 Message Loop가 일시정지되어 UI 업데이트를 할 수 없음.
   당연한 말이지만, Application.Run으로 생성된 Form이 아니기 때문에 ApplicationExit 이벤트 핸들러가 호출되지 않음.
 
 ##참고
